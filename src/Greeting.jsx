@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function Greeting() {
+export default function Greeting(props) {
   return (
-    <div>
-      <h3>React intro</h3>
+    // declearing props
+    <div className="greeting">
+      <h3>React intro-- {props.first}--{props.age}</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
         doloremque nostrum voluptatum architecto soluta dolores blanditiis

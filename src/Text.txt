@@ -1,0 +1,19 @@
+26/05/2026
+
+## Props
+
+    Props is nothing but drilling data from parent to child commponent.
+
+            declearing Props
+            Destructuring Props
+
+
+## style in react.
+
+    global style ---- index.css and app.css is called as global style files.
+    external style --- to create a seperate css file for a particular component.
+    module style --- we need to menstion the file name as eg:[fileName.module.css].
+    inline style --- we need to call the style attribut with {{padding:"20px"}}
+    object style ----  we need to declear the styleing property as an
+                        object in keys and values pare.
+
