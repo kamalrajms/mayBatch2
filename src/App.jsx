@@ -4,6 +4,8 @@ import DestructuringProps from "./DestructuringProps";
 import ExternalStyle from "./ExternalStyle";
 import ModuleStyle from "./ModuleStyle";
 import ObjectStyle from "./ObjectStyle";
+import ConditionalRendering from "./Component/ConditionalRendering";
+import ListRendering from "./Component/ListRendering";
 
 export default function App() {
   const session = "React js";
@@ -22,6 +24,8 @@ export default function App() {
 
   return (
     <>
+      <ListRendering />
+      <ConditionalRendering />
       <h1 style={{ padding: "40px", color: "red", backgroundColor: "yellow" }}>
         Hello world!!!--{session}
       </h1>
