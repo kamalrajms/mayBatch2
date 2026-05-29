@@ -6,6 +6,9 @@ import ModuleStyle from "./ModuleStyle";
 import ObjectStyle from "./ObjectStyle";
 import ConditionalRendering from "./Component/ConditionalRendering";
 import ListRendering from "./Component/ListRendering";
+import UseStateHook from "./Component/UseStateHook";
+import DarkMode from "./Component/DarkMode";
+import Fields from "./Component/Fields";
 
 export default function App() {
   const session = "React js";
@@ -24,6 +27,9 @@ export default function App() {
 
   return (
     <>
+      <Fields />
+      <DarkMode />
+      <UseStateHook />
       <ListRendering />
       <ConditionalRendering />
       <h1 style={{ padding: "40px", color: "red", backgroundColor: "yellow" }}>

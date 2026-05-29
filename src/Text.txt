@@ -72,3 +72,22 @@
     ))
 
     new array=[2,4,6,8]
+
+
+29/05/2026
+
+## usestate()
+
+    usestate, is a react hook that allows you to add state (data that can change  over time)
+    to a functional component.
+
+    Normally ,  in js functions,variables disappear after the function run .But with
+    usestate ,react remember values b/w re-render.
+
+        syntax:
+
+            const[state,setState]=usestate(initialValue)
+
+        state---the current value of the state variables
+        setState--- a function that updates the state
+        initialValue--- the starting value of the state.
