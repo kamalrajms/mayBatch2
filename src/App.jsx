@@ -9,6 +9,9 @@ import ListRendering from "./Component/ListRendering";
 import UseStateHook from "./Component/UseStateHook";
 import DarkMode from "./Component/DarkMode";
 import Fields from "./Component/Fields";
+import RegForm from "./Component/RegForm";
+import ConditionalFrom from "./Component/ConditionalFrom";
+import UseEffectHook from "./Component/UseEffectHook";
 
 export default function App() {
   const session = "React js";
@@ -27,6 +30,9 @@ export default function App() {
 
   return (
     <>
+    <UseEffectHook/>
+      <ConditionalFrom />
+      <RegForm />
       <Fields />
       <DarkMode />
       <UseStateHook />
