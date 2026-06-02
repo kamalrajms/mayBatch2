@@ -5,7 +5,7 @@ export default function UseEffectHook() {
   const [num, setNum] = useState(4);
   useEffect(() => {
     console.log("component mounted");
-  }, []);
+  }, [num]);
   useEffect(() => {
     console.log(`count changes to ${count},${num}`);
   }, [count, num]);

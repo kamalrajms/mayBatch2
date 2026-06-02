@@ -12,6 +12,9 @@ import Fields from "./Component/Fields";
 import RegForm from "./Component/RegForm";
 import ConditionalFrom from "./Component/ConditionalFrom";
 import UseEffectHook from "./Component/UseEffectHook";
+import Timer from "./Component/Timer";
+import StopWatch from "./Component/StopWatch";
+import UseEffectApi from "./Component/UseEffectApi";
 
 export default function App() {
   const session = "React js";
@@ -30,7 +33,10 @@ export default function App() {
 
   return (
     <>
-    <UseEffectHook/>
+    <UseEffectApi/>
+      <StopWatch />
+      <Timer />
+      <UseEffectHook />
       <ConditionalFrom />
       <RegForm />
       <Fields />
