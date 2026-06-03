@@ -115,4 +115,20 @@
         []---- if that dependency is empty means  it run the 
         function only once at the begining.
 
-        
+03/06/2026
+
+## useRef()
+
+    useRef is a react hook that gives you a box (.current) you can store anything in-
+    like : num,string,obj,function,even DOm element..
+
+    That value persists b/w render
+
+    Updating it does not causes your component to re-render.
+
+    {current:value}
+
+
+    syntax:
+    
+    const variableName=useRef();

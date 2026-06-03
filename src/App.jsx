@@ -15,6 +15,7 @@ import UseEffectHook from "./Component/UseEffectHook";
 import Timer from "./Component/Timer";
 import StopWatch from "./Component/StopWatch";
 import UseEffectApi from "./Component/UseEffectApi";
+import UseRefHook from "./Component/UseRefHook";
 
 export default function App() {
   const session = "React js";
@@ -33,7 +34,8 @@ export default function App() {
 
   return (
     <>
-    <UseEffectApi/>
+      <UseRefHook />
+      <UseEffectApi />
       <StopWatch />
       <Timer />
       <UseEffectHook />
