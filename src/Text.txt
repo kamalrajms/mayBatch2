@@ -132,3 +132,16 @@
     syntax:
     
     const variableName=useRef();
+
+04/06/2026
+
+##  useContext()
+
+    Passing data from a Parent component down to deep nested child component is annoying.
+    Normally ,you'd have to pass props manually through eacch level (called props drolling)
+    useContext lets you to skip all the middle commponent and sare the data directly.
+
+            create a context  --- we can able to creat only one createcontext() for a conponent  
+            Provide a value
+            Consume the value
+

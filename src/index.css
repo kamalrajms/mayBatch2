@@ -29,3 +29,14 @@
   /* background-color: aqua; */
   cursor: pointer;
 }
+
+.light {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+}
+.black {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, createContext, useState } from "react";
 import Greeting from "./Greeting";
 import DestructuringProps from "./DestructuringProps";
 import ExternalStyle from "./ExternalStyle";
@@ -16,6 +16,10 @@ import Timer from "./Component/Timer";
 import StopWatch from "./Component/StopWatch";
 import UseEffectApi from "./Component/UseEffectApi";
 import UseRefHook from "./Component/UseRefHook";
+import First from "./Context/First";
+import ContextForm from "./Context/ContextForm";
+
+export const Pass = createContext();
 
 export default function App() {
   const session = "React js";
@@ -32,8 +36,24 @@ export default function App() {
   const age3 = 55;
   const city3 = "namakkal";
 
+  const [theme, setTheme] = useState("light");
+  const data = { name: "react.js" };
+  console.log(theme);
+  
+
   return (
     <>
+      <div style={{ padding: "20px", border: "2px solid #333" }}>
+        <Pass.Provider value={{theme,setTheme,data}}>
+          <ContextForm />
+        </Pass.Provider>
+      </div>
+      <div style={{ padding: "20px", border: "2px solid #333" }}>
+        <h2>App component---{session}</h2>
+        <Pass.Provider value={session}>
+          <First />
+        </Pass.Provider>
+      </div>
       <UseRefHook />
       <UseEffectApi />
       <StopWatch />
