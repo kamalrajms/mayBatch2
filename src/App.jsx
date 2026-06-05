@@ -18,6 +18,9 @@ import UseEffectApi from "./Component/UseEffectApi";
 import UseRefHook from "./Component/UseRefHook";
 import First from "./Context/First";
 import ContextForm from "./Context/ContextForm";
+import UseReducerHook from "./Component/UseReducerHook";
+import ReducerForm from "./Component/ReducerForm";
+import UseIDHookEg from "./Component/UseIDHookEg";
 
 export const Pass = createContext();
 
@@ -39,12 +42,16 @@ export default function App() {
   const [theme, setTheme] = useState("light");
   const data = { name: "react.js" };
   console.log(theme);
-  
 
   return (
     <>
+      <UseIDHookEg />
+      <UseIDHookEg />
+      <UseIDHookEg />
+      <ReducerForm />
+      <UseReducerHook />
       <div style={{ padding: "20px", border: "2px solid #333" }}>
-        <Pass.Provider value={{theme,setTheme,data}}>
+        <Pass.Provider value={{ theme, setTheme, data }}>
           <ContextForm />
         </Pass.Provider>
       </div>

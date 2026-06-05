@@ -145,3 +145,27 @@
             Provide a value
             Consume the value
 
+05/06/2026
+
+## useReducer()
+
+    syntax:
+
+        const [state,dispatch]=useReducer(reducerfunction,initialState)
+
+        state--- current state (like usestate value)
+        dispatch(action)--- a function to tell the reducer what to do
+        reducerfunction(state,action)-- the logic that return a new state
+        initialState--- starting value. 
+
+## useID ()
+
+    useID() is a react hook, introduced in react 18
+
+    it is used to generate  an unique ID's that are consistent  
+    b/w server and client.
+
+    syntax:
+
+        const variableName=useID();
+
