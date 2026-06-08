@@ -21,6 +21,13 @@ import ContextForm from "./Context/ContextForm";
 import UseReducerHook from "./Component/UseReducerHook";
 import ReducerForm from "./Component/ReducerForm";
 import UseIDHookEg from "./Component/UseIDHookEg";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Home from "./Routing/Home";
+import About from "./Routing/About";
+import Service from "./Routing/Service";
+import Contact from "./Routing/Contact";
+import AppDev from "./Routing/AppDev";
+import WebDev from "./Routing/WebDev";
 
 export const Pass = createContext();
 
@@ -43,46 +50,73 @@ export default function App() {
   const data = { name: "react.js" };
   console.log(theme);
 
+  const display = false;
+
   return (
     <>
-      <UseIDHookEg />
-      <UseIDHookEg />
-      <UseIDHookEg />
-      <ReducerForm />
-      <UseReducerHook />
-      <div style={{ padding: "20px", border: "2px solid #333" }}>
-        <Pass.Provider value={{ theme, setTheme, data }}>
-          <ContextForm />
-        </Pass.Provider>
-      </div>
-      <div style={{ padding: "20px", border: "2px solid #333" }}>
-        <h2>App component---{session}</h2>
-        <Pass.Provider value={session}>
-          <First />
-        </Pass.Provider>
-      </div>
-      <UseRefHook />
-      <UseEffectApi />
-      <StopWatch />
-      <Timer />
-      <UseEffectHook />
-      <ConditionalFrom />
-      <RegForm />
-      <Fields />
-      <DarkMode />
-      <UseStateHook />
-      <ListRendering />
-      <ConditionalRendering />
-      <h1 style={{ padding: "40px", color: "red", backgroundColor: "yellow" }}>
-        Hello world!!!--{session}
-      </h1>
-      <ObjectStyle />
-      <ModuleStyle />
-      <ExternalStyle />
-      <Greeting first={name} age={age} />
-      <DestructuringProps name={name} age={age} city={city} />
-      <DestructuringProps name={name2} age={age2} city={city2} />
-      <DestructuringProps name={name3} age={age3} city={city3} />
+      {display && (
+        <div>
+          <UseIDHookEg />
+          <UseIDHookEg />
+          <UseIDHookEg />
+          <ReducerForm />
+          <UseReducerHook />
+          <div style={{ padding: "20px", border: "2px solid #333" }}>
+            <Pass.Provider value={{ theme, setTheme, data }}>
+              <ContextForm />
+            </Pass.Provider>
+          </div>
+          <div style={{ padding: "20px", border: "2px solid #333" }}>
+            <h2>App component---{session}</h2>
+            <Pass.Provider value={session}>
+              <First />
+            </Pass.Provider>
+          </div>
+          <UseRefHook />
+          <UseEffectApi />
+          <StopWatch />
+          <Timer />
+          <UseEffectHook />
+          <ConditionalFrom />
+          <RegForm />
+          <Fields />
+          <DarkMode />
+          <UseStateHook />
+          <ListRendering />
+          <ConditionalRendering />
+          <h1
+            style={{ padding: "40px", color: "red", backgroundColor: "yellow" }}
+          >
+            Hello world!!!--{session}
+          </h1>
+          <ObjectStyle />
+          <ModuleStyle />
+          <ExternalStyle />
+          <Greeting first={name} age={age} />
+          <DestructuringProps name={name} age={age} city={city} />
+          <DestructuringProps name={name2} age={age2} city={city2} />
+          <DestructuringProps name={name3} age={age3} city={city3} />
+        </div>
+      )}
+
+      <BrowserRouter>
+        <div className="header">
+          <Link to={"/Home"}>Home</Link>
+          <Link to={"/About"}>About</Link>
+          <Link to={"/Contact"}>Contact</Link>
+          <Link to={"/"}>Service</Link>
+        </div>
+
+        <Routes>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/About" element={<About />}>
+            <Route path="" element={<AppDev/>}/>
+            <Route path="webDev" element={<WebDev/>}/>
+          </Route>
+          <Route path="/" element={<Service />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
