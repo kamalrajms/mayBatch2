@@ -215,3 +215,29 @@
             Defines a specific URL path  and which component should load for the that
             path.
     
+
+
+11/06/2026
+
+## useParams()
+
+    useParams is a hook prvided by React Router that Return an object
+    Containing key/value pairs of the  dynamic paramemeter from the current url.
+    
+    these paramemeter are defined in yours router path usinng a colon (:) followed by
+    a paramemeter name.
+
+    syntax:
+
+        const params=useParams()
+
+## UseNavigate()
+
+    UseNavigate is a hook provided  by react router that returns a function allowing
+    you to programmatically navigate to different routers (changing url).
+
+    syntax:
+
+        const params=UseNavigate()
+
+    
