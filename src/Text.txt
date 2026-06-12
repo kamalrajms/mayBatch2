@@ -240,4 +240,19 @@
 
         const params=UseNavigate()
 
-    
+12/06/2026
+
+## usesearchParams()
+
+    usesearchParams is a hook provided by react router  used to read,access and update query
+    paramemeter (search paramemeter) in the URL.
+
+    usesearchParams helps manage URL query paramemeter dynamically in react
+
+    syntax:
+
+        const[searchParams,setSearchParams]=usesearchParams();
+
+
+        searchParams----- read values
+        setSearchParams----- update values
